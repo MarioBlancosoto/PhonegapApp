@@ -26,16 +26,18 @@ function funcGuay(){
       
        if(contador==1){
            document.getElementById("img1").style.width="100%";
-      
+       
         
        }else if(contador>=2){
            
             document.getElementById("img1").style.width="30%";  
+           
        }
       
 };
 
-function sacarFoto(){       
+function sacarFoto(){ 
+    
 navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 destinationType: Camera.DestinationType.FILE_URI });
 
@@ -43,9 +45,11 @@ destinationType: Camera.DestinationType.FILE_URI });
 
 };
     function onSuccess(imageURI) {
+    
     var image = document.getElementById('img1');
     //imageURI = "/Users/mbs/Desktop/Phonegap/hello/platforms";
     image.style.display = 'block';
+    navigator.vibrate(1000);
     alert("Foto guardada");
     image.src = imageURI;
     
@@ -90,7 +94,7 @@ var app = {
         var porcentaje = document.createTextNode(status.level+" %");
         td1.appendChild(porcentaje);    
     if(status.level==100){    
-       
+        navigator.vibrate([1000,1000,1000]);
         alert('Carga Completada');
     }
     
@@ -101,7 +105,7 @@ var app = {
     if (enchufado == true){
     
     td2.appendChild(si); 
-    navigator.vibrate(3000);
+    navigator.vibrate(1000);
     }else{
     td2.appendChild(no);    
     }
