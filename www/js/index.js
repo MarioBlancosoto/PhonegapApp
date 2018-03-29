@@ -94,7 +94,7 @@ var app = {
         var porcentaje = document.createTextNode(status.level+" %");
         td1.appendChild(porcentaje);    
     if(status.level==100){    
-        navigator.vibrate([1000,1000,1000]);
+        navigator.vibrate(1000);
         alert('Carga Completada');
     }
     
