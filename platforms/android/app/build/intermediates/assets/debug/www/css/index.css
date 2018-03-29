@@ -76,7 +76,12 @@ body {
     
 }
 
-
+.tabla{
+    
+font-weight: bold;  
+ 
+  
+}
 
 
 
@@ -144,15 +149,15 @@ body {
 
 
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
-    left:15%;
-    top:10%;
+    
+    top:15%;
     height:15%;                   /* text area height */
     width:190px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:5px 0px 0px -100px;  /* offset vertical: half of image height and text area height */
+      /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
 

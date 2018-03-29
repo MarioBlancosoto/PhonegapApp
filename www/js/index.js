@@ -90,7 +90,7 @@ var app = {
         var porcentaje = document.createTextNode(status.level+" %");
         td1.appendChild(porcentaje);    
     if(status.level==100){    
-        navigator.vibrate([1000,1000,1000]);
+       
         alert('Carga Completada');
     }
     
@@ -99,8 +99,9 @@ var app = {
     
     var enchufado = status.isPlugged;
     if (enchufado == true){
+    
+    td2.appendChild(si); 
     navigator.vibrate(3000);
-    td2.appendChild(si);    
     }else{
     td2.appendChild(no);    
     }

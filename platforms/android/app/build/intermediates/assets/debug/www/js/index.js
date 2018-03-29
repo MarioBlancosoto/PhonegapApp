@@ -18,7 +18,8 @@
  */
 
 var contador =0;
-var aux = true;      
+var aux = true;   
+
 
 function funcGuay(){
       contador+=1;
@@ -44,9 +45,11 @@ destinationType: Camera.DestinationType.FILE_URI });
     function onSuccess(imageURI) {
     var image = document.getElementById('img1');
     //imageURI = "/Users/mbs/Desktop/Phonegap/hello/platforms";
-        image.style.display = 'block';
+    image.style.display = 'block';
     alert("Foto guardada");
     image.src = imageURI;
+    
+       
     
 };
        function onFail(message) {
@@ -72,9 +75,44 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        var td1 = document.getElementById('device');
+        var td2 = document.getElementById('platform');
+        var dev = document.createTextNode(device.model);
+        var plat = document.createTextNode(device.platform);
+        td1.appendChild(dev);
+        td2.appendChild(plat);
+       
+        
     },
     onBatteryStatus: function(status){
-    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
+    var td1 = document.getElementById('percent');
+    var td2 = document.getElementById('conection');
+        var porcentaje = document.createTextNode(status.level+" %");
+        td1.appendChild(porcentaje);    
+    if(status.level==100){    
+        navigator.vibrate([1000,1000,1000]);
+        alert('Carga Completada');
+    }
+    
+    var si = document.createTextNode("SI");
+    var no = document.createTextNode("NO");    
+    
+    var enchufado = status.isPlugged;
+    if (enchufado == true){
+    navigator.vibrate(3000);
+    td2.appendChild(si);    
+    }else{
+    td2.appendChild(no);    
+    }
+    
+    
+    
+    
+    
+     
+    
+    
+     
 },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

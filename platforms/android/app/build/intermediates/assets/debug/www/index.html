@@ -43,17 +43,38 @@
 </head>
 
 <body>
-    
+   
     <div class ="Cabecera">
-        <h1>Prueba aplicación PhoneGap</h1>       
+        <h1>aplicación PhoneGap</h1>       
     </div>  
     <img id ="img1" src="img/google.gif" onclick="funcGuay()"/>
     <input id ="botonCutre" type="button" value="CÁMARA" title="Esto es un botón muy cutre!!!" onclick="sacarFoto()"/>
+<table class="tabla">
+  <tr>
+    <td>Bateria :</td>
+    <td id="percent"></td>
+  </tr>
 
+  <tr>
+    <td>Cargando? :</td>
+    <td id="conection"></td>
+  </tr>
+    
+    <tr>
+    <td>Dispositivo :</td>
+    <td id="device"></td>
+   </tr>
+    
+    <tr>
+    <td>Plataforma :</td>
+    <td id="platform"></td>
+  </tr>
+    
+</table>
 
    
     <div class="app">
-        <h1>PhoneGap</h1>
+     
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">El dispositivo está listo</p>
@@ -62,6 +83,7 @@
   
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+  
     <script type="text/javascript">
         app.initialize();
     </script>
