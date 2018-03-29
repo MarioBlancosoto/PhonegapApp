@@ -1,0 +1,56 @@
+PRUEBAS :
+
+-Actividad realizada para evaluar la calidad de un producto y mejorarla,identificando problemas y defectos.
+
+- De Verificación : proceso de evaluación que determina si un producto satisface las condiciones impuestas al inicio de una fase.
+- De Validación : Proceso de evaluación de un sistema que determina si un producto satisface los requerimientos especificados al final de su desarrollo.
+
+-Pruebas de software: Son las investigaciones y técnicas que  dan información objetiva e independiente sobre la calidad del producto a la parte interesada o stakeholders.
+
+
+-Casos de pruebas: Conjunto de variables bajo las cuales un analista determinará si un software o o una caracteristica del software es satisfactoria.
+
+
+TIPOS DE PRUEBAS POR SU EJECUCIÓN :
+En la mayoría de casos comienzan con pruebas de componentes y a continuación se realizan pruebas del sistema.
+
+-Pruebas manuales : son aquellas en las que ejecuta un tester como si fuese un usuario mormal pero siguiendo una serie de pasos establecidos.
+
+-Pruebas automáticas : Consiste en el uso de un software especial para controlar la ejecución de las pruebas y comparar los resultados obtenidos y los resultados esperados.
+
+* Para sistemas complejos existen dos fases distintas :
+
+-Pruebas de integración : en las que el equipo tiene acceso al código fuente del sistema,busca los errores e intenta arreglarlos,integrando sus componentes.
+-Integración descendente : Se parte desde el programa principal y se recorre hacia abajo por la jerarquía.
+
+-STUBS : Si falta un componente esencial para la prueba,este podrá simularse mediante STUBS.
+
+-Pruebas de entrega : Se prueba una versión que podría ser entregada al cliente para validar los requerimientos de este.
+
+-Pruebas de rendimiento : Diseñadas para asegurar que el sistema soporta la carga esperada.
+Se planifica la carga de modo que vaya aumentada progresivamente hasta que el rendimiento del sistema sea inaceptable.
+
+
+PRUEBAS DE COMPONENTES :
+
+Comprueba los componentes individuales del sistema: Funciones,métodos,variables,clases y objetos.
+
+
+PRUEBAS DE INTERFACES :
+
+Son particularmente importantes para el desarrollo orientado a objetos y basado en componentes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
