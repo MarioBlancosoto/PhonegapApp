@@ -92,7 +92,7 @@ var app = {
     onBatteryStatus: function(status){
     var td1 = document.getElementById('percent');
     var td2 = document.getElementById('conection');
-        var porcentaje = status.level;
+        var porcentaje = status.level+"%";
         td1.innerHTML=porcentaje;    
     if(status.level==100){    
         navigator.vibrate(1000);
