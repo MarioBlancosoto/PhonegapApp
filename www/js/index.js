@@ -77,47 +77,40 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
+   
+        onDeviceReady: function() {
         app.receivedEvent('deviceready');
         var td1 = document.getElementById('device');
         var td2 = document.getElementById('platform');
-        var dev = document.createTextNode(device.model);
-        var plat = document.createTextNode(device.platform);
-        td1.appendChild(dev);
-        td2.appendChild(plat);
+        var dev = device.model;
+        var plat =device.platform;
+        td1.innerHTML =dev;
+        td2.innerHTML=plat;
        
         
     },
     onBatteryStatus: function(status){
     var td1 = document.getElementById('percent');
     var td2 = document.getElementById('conection');
-        var porcentaje = document.createTextNode(status.level+" %");
-        td1.appendChild(porcentaje);    
+        var porcentaje = status.level;
+        td1.innerHTML=porcentaje;    
     if(status.level==100){    
         navigator.vibrate(1000);
         alert('Carga Completada');
     }
     
-    var si = document.createTextNode("SI");
-    var no = document.createTextNode("NO");    
+    var si = "SI";
+    var no = "NO";    
     
     var enchufado = status.isPlugged;
     if (enchufado == true){
     
-    td2.appendChild(si); 
+    td2.innerHTML = si; 
     navigator.vibrate(1000);
     }else{
-    td2.appendChild(no);    
+    td2.innerHTML = no;    
     }
-    
-    
-    
-    
-    
-     
-    
-    
-     
+       
 },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
